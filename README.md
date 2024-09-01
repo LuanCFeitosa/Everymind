@@ -46,7 +46,7 @@ CREATE INDEX IF NOT EXISTS produtos_produto_codigo_5e3ac81c_like
     TABLESPACE pg_default;    
 ```
 
-No arquivo settings.py na linha 78 trocar os valores das variáveis do Banco de dados
+No arquivo settings.py na linha 78 trocar os valores das variáveis USER e PASSWORD do Banco de dados
 
 ```sh
 DATABASES = {
