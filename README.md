@@ -25,18 +25,9 @@ psql -U postgres
 ```
 Para criação do banco de dados e tabela
 ```sh
-CREATE DATABASE nunes_sports_db
-    WITH
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'Portuguese_Brazil.1252'
-    LC_CTYPE = 'Portuguese_Brazil.1252'
-    LOCALE_PROVIDER = 'libc'
-    TABLESPACE = pg_default
-    CONNECTION LIMIT = -1
-    IS_TEMPLATE = False;
+CREATE DATABASE nunes_sports_db;
 
-USE nunes_sports_db
+\c nunes_sports_db;
 
 CREATE TABLE IF NOT EXISTS public.produtos_produto
 (
@@ -47,12 +38,7 @@ CREATE TABLE IF NOT EXISTS public.produtos_produto
     preco numeric(10,2) NOT NULL,
     CONSTRAINT produtos_produto_pkey PRIMARY KEY (id),
     CONSTRAINT produtos_produto_codigo_key UNIQUE (codigo)
-)
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.produtos_produto
-    OWNER to postgres;
+);
 
 CREATE INDEX IF NOT EXISTS produtos_produto_codigo_5e3ac81c_like
     ON public.produtos_produto USING btree
