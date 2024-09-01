@@ -79,8 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'nunes_sports_db',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
+        'USER': 'seu_usuario',
+        'PASSWORD': 'sua_senha',
         'HOST': 'localhost',
         'PORT': '5432',
     }
