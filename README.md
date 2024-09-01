@@ -1,5 +1,5 @@
 # Nune Sports
-Projeto de site que permite o usuário gerenciar o estoque de produtos vendidos pela empresa, podendo visualizá-los em uma tabela, também podendo criar, deletar e editar os dados diretamente do banco de dados a partir da página web.
+Projeto de uma página web que permite o usuário gerenciar o estoque de produtos vendidos pela Nune Sports, podendo visualizá-los em uma tabela, assim como criar, deletar e editar produtos. Todos os dados são mantidos em banco de dados.
 ## Clonar projeto do github
 ```sh
 $ git clone https://github.com/LuanCFeitosa/Everymind.git
@@ -8,15 +8,22 @@ $ cd Everymind
 
 ## Instalações
 
+Python: 'https://www.python.org/downloads/'
+
+Após baixar o python, executar o seguinte comando para baixar o django
 ```sh
 $ pip install django djangorestframework psycopg2
 ```
 PostreSQL: 'https://www.postgresql.org/download/'
 
-Python: 'https://www.python.org/downloads/'
+
 
 ## Configuração do banco de dados
-
+Para acessar o postgres no terminal, execute o comando
+```sh
+psql -U postgres
+```
+Para criação do banco de dados e tabela
 ```sh
 CREATE DATABASE nunes_sports_db
     WITH
