@@ -26,7 +26,7 @@
             </div>
             <div class="form-group">
                 <label for="preco">Preço:</label>
-                <input type="text" id="preco" name="preco" value="{{ form.preco.value|default_if_none:'' }}">
+                <input type="number" step="0.01" id="preco" name="preco" value="{{ form.preco.value|default_if_none:'' }}">
             </div>
             <button type="submit">{% if produto.id %}Atualizar{% else %}Adicionar{% endif %}</button>
             <a class='back-button' href="{% url 'produto_list' %}">Voltar à Lista</a>
